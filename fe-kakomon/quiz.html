@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>問題演習 | 基本情報技術者試験</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <button class="back-button" onclick="goHome()">← ホーム</button>
+    <div>
+      <h1>基本情報技術者試験</h1>
+      <p>2023年度 問題演習</p>
+    </div>
+  </div>
+</header>
+
+<main class="quiz-container">
+
+  <div class="progress-area">
+    <div class="progress-label">
+      <span id="questionNumber">問題 1 / 30</span>
+      <span id="progressPercent">3%</span>
+    </div>
+    <div class="progress-bar">
+      <div id="progress" class="progress"></div>
+    </div>
+  </div>
+
+  <section class="question-card">
+
+    <div id="category" class="category"></div>
+
+    <div id="subcategory" class="subcategory"></div>
+
+    <h2 id="question" class="question"></h2>
+
+    <p class="instruction">最も適切なものを1つ選んでください。</p>
+
+    <div id="choices" class="choices"></div>
+
+    <button id="answerButton"
+      class="answer-button"
+      onclick="checkAnswer()">
+      回答する
+    </button>
+
+    <div id="result" class="result hidden">
+
+      <div id="resultTitle" class="result-title"></div>
+
+      <div class="answer-info">
+        <strong>正解：</strong>
+        <span id="correctAnswer"></span>
+      </div>
+
+      <div class="explanation">
+        <h3>解説</h3>
+        <p id="explanationText"></p>
+      </div>
+
+      <button id="nextButton"
+        class="next-button"
+        onclick="nextQuestion()">
+        次の問題
+      </button>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="data/2023.js"></script>
+<script src="quiz.js"></script>
+
+</body>
+</html>
